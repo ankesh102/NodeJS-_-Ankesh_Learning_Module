@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Pages </title>
+</head>
+<body>
+
+    <%- include('common/header');  %>  
+
+    <h1> Profile Pages </h1>
+
+    <!-- // Syntax How we can get data from file where dynamic routing is written  -->
+
+    <h1> 
+        Welcome,  <%= user.name %> </h1>
+    </h1>
+    <h2> Email : <%= user.email %></h2>
+    <h2> Phone : <%= user.phone %></h2>
+
+    <!-- // Rendering data in loop  -->
+    <ul>
+        <% user.skills.forEach((items) => {   %>
+            <li>
+                <%= items %>
+            </li>
+        <%  })  %>
+    </ul>
+
+</body>
+</html>
